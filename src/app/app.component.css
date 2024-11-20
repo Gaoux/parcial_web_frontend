@@ -1,0 +1,18 @@
+/* app.component.css */
+.container {
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  app-crear-contrato {
+    margin-bottom: 40px;
+  }
+  
+  app-mostrar-contratos {
+    margin-top: 20px;
+  }
+  

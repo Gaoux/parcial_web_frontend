@@ -1,0 +1,55 @@
+<div class="form-container">
+    <h2>Crear Nuevo Contrato</h2>
+    
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="identificador">Identificador</label>
+        <input id="identificador" type="text" class="form-control" [(ngModel)]="contrato.identificador" name="identificador" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="valor">Valor</label>
+        <input id="valor" type="number" class="form-control" [(ngModel)]="contrato.valor" name="valor" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="nombreContratante">Nombre del Contratante</label>
+        <input id="nombreContratante" type="text" class="form-control" [(ngModel)]="contrato.nombreContratante" name="nombreContratante" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="documentoContratante">Documento del Contratante</label>
+        <input id="documentoContratante" type="text" class="form-control" [(ngModel)]="contrato.documentoContratante" name="documentoContratante" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="nombreContratantista">Nombre del Contratantista</label>
+        <input id="nombreContratantista" type="text" class="form-control" [(ngModel)]="contrato.nombreContratantista" name="nombreContratantista" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="documentoContratantista">Documento del Contratantista</label>
+        <input id="documentoContratantista" type="text" class="form-control" [(ngModel)]="contrato.documentoContratantista" name="documentoContratantista" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="fechaInicial">Fecha Inicial</label>
+        <input id="fechaInicial" type="date" class="form-control" [(ngModel)]="contrato.fechaInicial" name="fechaInicial" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="fechaFinal">Fecha Final</label>
+        <input id="fechaFinal" type="date" class="form-control" [(ngModel)]="contrato.fechaFinal" name="fechaFinal" required />
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="!contrato.identificador || !contrato.valor || !contrato.nombreContratante || !contrato.documentoContratante || !contrato.nombreContratantista || !contrato.documentoContratantista || !contrato.fechaInicial || !contrato.fechaFinal">
+          Crear Contrato
+        </button>
+      </div>
+    </form>
+    <div *ngIf="submitMessage" class="message" [ngClass]="messageType">
+        {{ submitMessage }}
+      </div>
+  </div>
+  
